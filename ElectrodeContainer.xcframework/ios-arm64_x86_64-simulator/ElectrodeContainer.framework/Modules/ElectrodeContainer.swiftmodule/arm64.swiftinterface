@@ -1,0 +1,288 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
+// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ElectrodeContainer
+@_exported import ElectrodeContainer
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+@objc @_inheritsConvenienceInitializers @objcMembers public class EnNavigationAPI : ObjectiveC.NSObject {
+  @objc public var events: ElectrodeContainer.EnNavigationAPIEvents {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var requests: ElectrodeContainer.EnNavigationAPIRequests {
+    @objc get
+    @objc set(value)
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class EnNavigationAPIEvents : ObjectiveC.NSObject {
+  @objc public func addNavEventEventListener(eventListener _: @escaping ElectrodeContainer.ElectrodeBridgeEventListener) -> Foundation.UUID?
+  @objc public func removeNavEventEventListener(uuid _: Foundation.UUID) -> ElectrodeContainer.ElectrodeBridgeEventListener?
+  @objc public func emitEventNavEvent(eventData _: ElectrodeContainer.NavEventData)
+  @objc public func addOnNavButtonClickEventListener(eventListener _: @escaping ElectrodeContainer.ElectrodeBridgeEventListener) -> Foundation.UUID?
+  @objc public func removeOnNavButtonClickEventListener(uuid _: Foundation.UUID) -> ElectrodeContainer.ElectrodeBridgeEventListener?
+  @objc public func emitEventOnNavButtonClick(buttonId _: Swift.String)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class EnNavigationAPIRequests : ObjectiveC.NSObject {
+  @objc public func registerBackRequestHandler(handler _: @escaping ElectrodeContainer.ElectrodeBridgeRequestCompletionHandler) -> Foundation.UUID?
+  @objc public func registerFinishRequestHandler(handler _: @escaping ElectrodeContainer.ElectrodeBridgeRequestCompletionHandler) -> Foundation.UUID?
+  @objc public func registerNavigateRequestHandler(handler _: @escaping ElectrodeContainer.ElectrodeBridgeRequestCompletionHandler) -> Foundation.UUID?
+  @objc public func registerUpdateRequestHandler(handler _: @escaping ElectrodeContainer.ElectrodeBridgeRequestCompletionHandler) -> Foundation.UUID?
+  @objc public func unregisterBackRequestHandler(uuid _: Foundation.UUID) -> ElectrodeContainer.ElectrodeBridgeRequestCompletionHandler?
+  @objc public func unregisterFinishRequestHandler(uuid _: Foundation.UUID) -> ElectrodeContainer.ElectrodeBridgeRequestCompletionHandler?
+  @objc public func unregisterNavigateRequestHandler(uuid _: Foundation.UUID) -> ElectrodeContainer.ElectrodeBridgeRequestCompletionHandler?
+  @objc public func unregisterUpdateRequestHandler(uuid _: Foundation.UUID) -> ElectrodeContainer.ElectrodeBridgeRequestCompletionHandler?
+  @objc public func back(route _: ElectrodeContainer.ErnNavRoute, responseCompletionHandler _: @escaping (ElectrodeContainer.None?, ElectrodeContainer.ElectrodeFailureMessage?) -> Swift.Void)
+  @objc public func finish(finalPayload _: Swift.String, responseCompletionHandler _: @escaping (ElectrodeContainer.None?, ElectrodeContainer.ElectrodeFailureMessage?) -> Swift.Void)
+  @objc public func navigate(route _: ElectrodeContainer.ErnNavRoute, responseCompletionHandler _: @escaping (ElectrodeContainer.None?, ElectrodeContainer.ElectrodeFailureMessage?) -> Swift.Void)
+  @objc public func update(updatedRoute _: ElectrodeContainer.ErnNavRoute, responseCompletionHandler _: @escaping (ElectrodeContainer.None?, ElectrodeContainer.ElectrodeFailureMessage?) -> Swift.Void)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class EnNavigationEvents : ElectrodeContainer.EnNavigationAPIEvents {
+  @objc override public func addNavEventEventListener(eventListener: @escaping ElectrodeContainer.ElectrodeBridgeEventListener) -> Foundation.UUID?
+  @objc override public func addOnNavButtonClickEventListener(eventListener: @escaping ElectrodeContainer.ElectrodeBridgeEventListener) -> Foundation.UUID?
+  @objc override public func removeNavEventEventListener(uuid: Foundation.UUID) -> ElectrodeContainer.ElectrodeBridgeEventListener?
+  @objc override public func removeOnNavButtonClickEventListener(uuid: Foundation.UUID) -> ElectrodeContainer.ElectrodeBridgeEventListener?
+  @objc override public func emitEventNavEvent(eventData: ElectrodeContainer.NavEventData)
+  @objc override public func emitEventOnNavButtonClick(buttonId: Swift.String)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class EnNavigationRequests : ElectrodeContainer.EnNavigationAPIRequests {
+  @objc override public func registerBackRequestHandler(handler: @escaping ElectrodeContainer.ElectrodeBridgeRequestCompletionHandler) -> Foundation.UUID?
+  @objc override public func registerFinishRequestHandler(handler: @escaping ElectrodeContainer.ElectrodeBridgeRequestCompletionHandler) -> Foundation.UUID?
+  @objc override public func registerNavigateRequestHandler(handler: @escaping ElectrodeContainer.ElectrodeBridgeRequestCompletionHandler) -> Foundation.UUID?
+  @objc override public func registerUpdateRequestHandler(handler: @escaping ElectrodeContainer.ElectrodeBridgeRequestCompletionHandler) -> Foundation.UUID?
+  @objc override public func unregisterBackRequestHandler(uuid: Foundation.UUID) -> ElectrodeContainer.ElectrodeBridgeRequestCompletionHandler?
+  @objc override public func unregisterFinishRequestHandler(uuid: Foundation.UUID) -> ElectrodeContainer.ElectrodeBridgeRequestCompletionHandler?
+  @objc override public func unregisterNavigateRequestHandler(uuid: Foundation.UUID) -> ElectrodeContainer.ElectrodeBridgeRequestCompletionHandler?
+  @objc override public func unregisterUpdateRequestHandler(uuid: Foundation.UUID) -> ElectrodeContainer.ElectrodeBridgeRequestCompletionHandler?
+  @objc override public func back(route: ElectrodeContainer.ErnNavRoute, responseCompletionHandler: @escaping (ElectrodeContainer.None?, ElectrodeContainer.ElectrodeFailureMessage?) -> Swift.Void)
+  @objc override public func finish(finalPayload: Swift.String, responseCompletionHandler: @escaping (ElectrodeContainer.None?, ElectrodeContainer.ElectrodeFailureMessage?) -> Swift.Void)
+  @objc override public func navigate(route: ElectrodeContainer.ErnNavRoute, responseCompletionHandler: @escaping (ElectrodeContainer.None?, ElectrodeContainer.ElectrodeFailureMessage?) -> Swift.Void)
+  @objc override public func update(updatedRoute: ElectrodeContainer.ErnNavRoute, responseCompletionHandler: @escaping (ElectrodeContainer.None?, ElectrodeContainer.ElectrodeFailureMessage?) -> Swift.Void)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class ErnNavRoute : ElectrodeContainer.ElectrodeObject, ElectrodeContainer.Bridgeable {
+  @objc final public let path: Swift.String
+  @objc final public let jsonPayload: Swift.String?
+  @objc final public let navigationBar: ElectrodeContainer.NavigationBar?
+  final public let overlay: Swift.Bool?
+  final public let refresh: Swift.Bool?
+  final public let replace: Swift.Bool?
+  public init(path: Swift.String, jsonPayload: Swift.String?, navigationBar: ElectrodeContainer.NavigationBar?, overlay: Swift.Bool?, refresh: Swift.Bool?, replace: Swift.Bool?)
+  @objc override dynamic public init()
+  @objc required public init(dictionary: [Swift.AnyHashable : Any])
+  @objc public func toDictionary() -> Foundation.NSDictionary
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class NavEventData : ElectrodeContainer.ElectrodeObject, ElectrodeContainer.Bridgeable {
+  @objc final public let eventType: Swift.String
+  @objc final public let viewId: Swift.String?
+  @objc final public let jsonPayload: Swift.String?
+  @objc public init(eventType: Swift.String, viewId: Swift.String?, jsonPayload: Swift.String?)
+  @objc override dynamic public init()
+  @objc required public init(dictionary: [Swift.AnyHashable : Any])
+  @objc public func toDictionary() -> Foundation.NSDictionary
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class NavigationBar : ElectrodeContainer.ElectrodeObject, ElectrodeContainer.Bridgeable {
+  @objc final public let title: Swift.String
+  final public let hide: Swift.Bool?
+  @objc final public let buttons: [ElectrodeContainer.NavigationBarButton]?
+  @objc final public let leftButton: ElectrodeContainer.NavigationBarLeftButton?
+  public init(title: Swift.String, hide: Swift.Bool?, buttons: [ElectrodeContainer.NavigationBarButton]?, leftButton: ElectrodeContainer.NavigationBarLeftButton?)
+  @objc override dynamic public init()
+  @objc required public init(dictionary: [Swift.AnyHashable : Any])
+  @objc public func toDictionary() -> Foundation.NSDictionary
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class NavigationBarButton : ElectrodeContainer.ElectrodeObject, ElectrodeContainer.Bridgeable {
+  @objc final public let title: Swift.String?
+  @objc final public let icon: Swift.String?
+  @objc final public let tint: Swift.String?
+  @objc final public let id: Swift.String
+  @objc final public let location: Swift.String?
+  final public let disabled: Swift.Bool?
+  @objc final public let adaLabel: Swift.String?
+  public init(title: Swift.String?, icon: Swift.String?, tint: Swift.String?, id: Swift.String, location: Swift.String?, disabled: Swift.Bool?, adaLabel: Swift.String?)
+  @objc override dynamic public init()
+  @objc required public init(dictionary: [Swift.AnyHashable : Any])
+  @objc public func toDictionary() -> Foundation.NSDictionary
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class NavigationBarLeftButton : ElectrodeContainer.ElectrodeObject, ElectrodeContainer.Bridgeable {
+  @objc final public let title: Swift.String?
+  @objc final public let icon: Swift.String?
+  @objc final public let tint: Swift.String?
+  @objc final public let id: Swift.String?
+  final public let disabled: Swift.Bool?
+  @objc final public let adaLabel: Swift.String?
+  public init(title: Swift.String?, icon: Swift.String?, tint: Swift.String?, id: Swift.String?, disabled: Swift.Bool?, adaLabel: Swift.String?)
+  @objc override dynamic public init()
+  @objc required public init(dictionary: [Swift.AnyHashable : Any])
+  @objc public func toDictionary() -> Foundation.NSDictionary
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc final public class EnNavigationApiController : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc final public func register(config: ElectrodeContainer.EnNavigationApiConfig? = nil)
+  @objc deinit
+}
+@objc public protocol EnNavigationApiRequestHandlerDelegate {
+  @objc func registerNavigateRequestHandler()
+  @objc func registerUpdateRequestHandler()
+  @objc func registerFinishRequestHandler()
+  @objc func registerBackRequestHandler()
+}
+@_hasMissingDesignatedInitializers @objc public class EnNavigationApiRequestHandlerProvider : ElectrodeContainer.RequestHandlerProvider, ElectrodeContainer.EnNavigationApiRequestHandlerDelegate {
+  @objc public func registerNavigateRequestHandler()
+  @objc public func registerUpdateRequestHandler()
+  @objc public func registerFinishRequestHandler()
+  @objc public func registerBackRequestHandler()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class EnNavigationApiConfig : ElectrodeContainer.RequestHandlerConfig {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class RequestHandlerConfig : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class RequestHandlerProvider : ObjectiveC.NSObject {
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class ENCoreDelegate : ObjectiveC.NSObject {
+  @objc public var viewIdentifier: Swift.String
+  @objc public func viewDidLoad(viewController: UIKit.UIViewController)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol ENMiniAppDataProvider {
+  @objc var rootComponentName: Swift.String { get }
+  @objc var properties: [Swift.AnyHashable : Any]? { get set }
+  @objc optional var globalProperties: [Swift.AnyHashable : Any]? { get set }
+}
+@objc @_Concurrency.MainActor(unsafe) open class ENBaseNavigationController : UIKit.UINavigationController, ElectrodeContainer.ENMiniAppNavDataProvider {
+  @_Concurrency.MainActor(unsafe) @objc open var rootComponentName: Swift.String
+  @_Concurrency.MainActor(unsafe) @objc open var properties: [Swift.AnyHashable : Any]?
+  @_Concurrency.MainActor(unsafe) @objc open var globalProperties: [Swift.AnyHashable : Any]?
+  @_Concurrency.MainActor(unsafe) @objc open var navigateWithRoute: ([Swift.AnyHashable : Any]) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc open var finish: ElectrodeContainer.Payload?
+  @_Concurrency.MainActor(unsafe) open var backTo: (Swift.String, [Swift.AnyHashable : Any]) -> Swift.Bool
+  @objc dynamic public init()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) open func getRootComponentName() -> Swift.String
+  @_Concurrency.MainActor(unsafe) open func getProps() -> [Swift.AnyHashable : Any]?
+  @_Concurrency.MainActor(unsafe) open func globalProps() -> [Swift.AnyHashable : Any]?
+  @_Concurrency.MainActor(unsafe) open func navigate(_ path: Swift.String, _ route: [Swift.AnyHashable : Any]) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) open func finishFlow(_ payload: [Swift.AnyHashable : Any]?)
+  @_Concurrency.MainActor(unsafe) open func backToMiniApp(_ componentName: Swift.String, _ backProperties: [Swift.AnyHashable : Any]) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) open func showCloseBarButton() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) open func emitPayloadToCurrentRNView(_ jsonPayload: Swift.String?)
+  @objc deinit
+}
+@available(*, deprecated, message: "MiniAppFinishedCallback is deprecated, use Payload")
+public typealias MiniAppFinishedCallback = (Swift.String?) -> Swift.Void
+public typealias Payload = ([Swift.AnyHashable : Any]?) -> Swift.Void
+public typealias NavigateWithRoute = ([Swift.AnyHashable : Any]) -> Swift.Bool
+public typealias BackToRoute = (_ componentName: Swift.String, _ properties: [Swift.AnyHashable : Any]) -> Swift.Bool
+@objc public protocol ENMiniAppNavDataProvider : ElectrodeContainer.ENMiniAppDataProvider {
+  @available(*, deprecated, message: "finishedCallback is deprecated, use finish")
+  @objc optional var finishedCallback: ElectrodeContainer.MiniAppFinishedCallback? { get set }
+  @objc optional var finish: ElectrodeContainer.Payload? { get set }
+  @objc optional var navigateWithRoute: ElectrodeContainer.NavigateWithRoute { get set }
+  @objc optional var backToMiniApp: ElectrodeContainer.BackToRoute { get set }
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class ENNavigationDelegate : ElectrodeContainer.ENCoreDelegate {
+  @objc override public func viewDidLoad(viewController: UIKit.UIViewController)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_Concurrency.MainActor(unsafe) open class MiniAppNavViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var finishedCallback: ElectrodeContainer.MiniAppFinishedCallback?
+  @_Concurrency.MainActor(unsafe) public var finish: ElectrodeContainer.Payload?
+  @_Concurrency.MainActor(unsafe) public var delegate: ElectrodeContainer.ENNavigationDelegate?
+  @_Concurrency.MainActor(unsafe) public var navigateWithRoute: ElectrodeContainer.NavigateWithRoute?
+  @_Concurrency.MainActor(unsafe) public var pushToExistingViewController: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var globalProperties: [Swift.AnyHashable : Any]?
+  @_Concurrency.MainActor(unsafe) public init(properties: [Swift.AnyHashable : Any]?, miniAppName: Swift.String)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidDisappear(_ animated: Swift.Bool)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers open class ElectrodeObject : ObjectiveC.NSObject {
+  required public init(dictionary _: [Swift.AnyHashable : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol Bridgeable {
+  @objc func toDictionary() -> Foundation.NSDictionary
+}
+public class ElectrodeRequestHandlerProcessor<TReq, TResp> : ObjectiveC.NSObject, ElectrodeContainer.Processor {
+  public init(requestName: Swift.String, reqClass: TReq.Type, reqItemType: Any.Type? = nil, respClass: TResp.Type, requestCompletionHandler: @escaping ElectrodeContainer.ElectrodeBridgeRequestCompletionHandler)
+  @objc public func execute() -> Foundation.UUID?
+  @objc deinit
+}
+public class ElectrodeRequestProcessor<TReq, TResp, TItem> : ObjectiveC.NSObject {
+  public init(requestName: Swift.String, requestPayload: Any?, respClass: TResp.Type, responseItemType: Any.Type?, responseCompletionHandler: @escaping ElectrodeContainer.ElectrodeBridgeResponseCompletionHandler)
+  public func execute() -> Foundation.UUID?
+  @objc deinit
+}
+public enum GenerateObjectError : Swift.Error {
+  case arrayTypeMissmatch
+  case emptyArrayItemType
+  case unsupportedType
+  case unBridgeable
+  case deserializationError
+  public static func == (a: ElectrodeContainer.GenerateObjectError, b: ElectrodeContainer.GenerateObjectError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ObjectiveC.NSObject {
+  public static func generateObject(data: Any, classType: Any.Type, itemType: Any.Type? = nil) throws -> Any
+}
+public class EventListenerProcessor<T> : ObjectiveC.NSObject, ElectrodeContainer.Processor {
+  public init(eventName: Swift.String, eventPayloadClass: T.Type, eventListener: @escaping ElectrodeContainer.ElectrodeBridgeEventListener)
+  @objc public func execute() -> Foundation.UUID?
+  @objc deinit
+}
+public class EventProcessor<T> : ObjectiveC.NSObject, ElectrodeContainer.Processor {
+  public init(eventName: Swift.String, eventPayload: T?)
+  @objc public func execute() -> Foundation.UUID?
+  @objc deinit
+}
+@objc public protocol Processor {
+  @objc func execute() -> Foundation.UUID?
+}
+@objc public class None : ObjectiveC.NSObject, ElectrodeContainer.Bridgeable {
+  @objc public func toDictionary() -> Foundation.NSDictionary
+  public init(emptyData _: Foundation.Data?)
+  @objc deinit
+}
+open class MiniAppsConfig {
+  public init()
+  final public let miniApps: [Swift.String]
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class TestMiniappNavigationController : ElectrodeContainer.ENBaseNavigationController {
+  @_Concurrency.MainActor(unsafe) override open func getRootComponentName() -> Swift.String
+  @objc override dynamic public init()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}

@@ -1,0 +1,11 @@
+framework module ElectrodeContainer {
+  umbrella header "ElectrodeContainer.h"
+
+  export *
+  module * { export * }
+}
+
+module ElectrodeContainer.Swift {
+    header "ElectrodeContainer-Swift.h"
+    requires objc
+}
