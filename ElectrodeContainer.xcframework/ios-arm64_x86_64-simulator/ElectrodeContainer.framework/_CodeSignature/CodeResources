@@ -127,7 +127,7 @@
 		</data>
 		<key>MiniApp.jsbundle</key>
 		<data>
-		H8rjC9d1BL6J9Orbn8Rz0FvYACk=
+		ok+aZdrl29XJyIcy/GYeUac3Ds0=
 		</data>
 		<key>Modules/ElectrodeContainer.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -184,26 +184,6 @@
 		<key>assets/README.md</key>
 		<data>
 		XdqLAfT+cHb3wnrIxirbSfFLWVQ=
-		</data>
-		<key>assets/node_modules/react-native/Libraries/LogBox/UI/LogBoxImages/alert-triangle.png</key>
-		<data>
-		YGtJjv/0VQ5cDcFaxFy5YoRrCrY=
-		</data>
-		<key>assets/node_modules/react-native/Libraries/LogBox/UI/LogBoxImages/chevron-left.png</key>
-		<data>
-		81qV8VhURXyii+hfS2PJSwYKI3Y=
-		</data>
-		<key>assets/node_modules/react-native/Libraries/LogBox/UI/LogBoxImages/chevron-right.png</key>
-		<data>
-		uNvkUKAkDSJlKuxrse/vdpwYXS8=
-		</data>
-		<key>assets/node_modules/react-native/Libraries/LogBox/UI/LogBoxImages/close.png</key>
-		<data>
-		cpg1MuVLPchjYyDfJIi24/IRmQw=
-		</data>
-		<key>assets/node_modules/react-native/Libraries/LogBox/UI/LogBoxImages/loader.png</key>
-		<data>
-		bJbFQTQyqOZi0nO1CYuLJLqo7LA=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -410,7 +390,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pvAXiXOhxcD+5qaHGXBGY/MKEaOH/jrvtFNL12GyPUg=
+			KLka4Zyn9UxEQotnaulbrGzqpv6twf1Cd73JlY0f5E4=
 			</data>
 		</dict>
 		<key>Modules/ElectrodeContainer.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -509,41 +489,6 @@
 			<key>hash2</key>
 			<data>
 			6Ncqh0D3/+YFGwzKAPXEwnwAuQ6plc4bQl6wcaLiTOk=
-			</data>
-		</dict>
-		<key>assets/node_modules/react-native/Libraries/LogBox/UI/LogBoxImages/alert-triangle.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			ac0Q1U3a2SOtcbkTFOJW3z3kuYnx7C1sJEPqlKu2/g4=
-			</data>
-		</dict>
-		<key>assets/node_modules/react-native/Libraries/LogBox/UI/LogBoxImages/chevron-left.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Y0B1lq+ws7WC6anMMXBekKDH0LE7CWT3uZh9Th4qCvw=
-			</data>
-		</dict>
-		<key>assets/node_modules/react-native/Libraries/LogBox/UI/LogBoxImages/chevron-right.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			lNChVuwUz/fSV1ypRC3z7+8nDUzp4y3aN7uiXrf+gik=
-			</data>
-		</dict>
-		<key>assets/node_modules/react-native/Libraries/LogBox/UI/LogBoxImages/close.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			XJ8hiAwxHqkoUkiRXb5ziR2UDFcDuam63PKpR+vZAOw=
-			</data>
-		</dict>
-		<key>assets/node_modules/react-native/Libraries/LogBox/UI/LogBoxImages/loader.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			x7L99ApmKJDK7FAFP539r+wJL1xIa3WImpGdRzlRw6g=
 			</data>
 		</dict>
 	</dict>
